@@ -17,8 +17,8 @@ namespace CodeRanking
             int taxPercent = Console.Read();
             Console.ReadLine();
 
-            tipPercent= (int) (mealCost * (tipPercent / 100));
-            taxPercent = (int) (mealCost * (taxPercent / 100));
+            tipPercent= (int) (mealCost * tipPercent) / 100;
+            taxPercent = (int) (mealCost * taxPercent) / 100;
             var totalCost = (int)mealCost + taxPercent + tipPercent;
 
             Console.WriteLine(totalCost);
